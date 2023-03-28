@@ -1,9 +1,117 @@
-* {
+body {
   margin: 0;
   padding: 0;
+  float: left;
+  height: 100%;
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+  overflow-y: scroll;
+  background-color: rgb(60, 60, 60);
 }
 
-button {
-  width: 10%;
-  font-size: 14px;
+.pessoas, .contatos {
+  width: 48%;
+  height: 70%;
+  background-color: rgb(60, 60, 60);
+  float: left;
+  color: white;
+  border: solid;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 5px;
+  padding: 2px;
 }
+
+.cabeçalho {
+  height: 25px;
+  padding: 2px 5px;
+}
+
+input {
+  background-color: rgb(60, 60, 60);
+  color: white;
+}
+
+.pesquisar-pessoa, .pesquisar-contato, .add-contato, .add-pessoa {
+  background-color: rgb(60, 60, 60);
+  color: white;
+  border: solid;
+  border-width: 2px;
+  border-color: black;  
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-conteudo {
+  background-color: rgb(60, 60, 60);
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.modal-conteudo h2 {
+  margin-top: 0;
+}
+
+.modal-conteudo label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal-conteudo input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+table, th, td {
+  border: 2px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+th, td{
+  padding: 4px;
+  text-align: center;
+  width: 235px;
+}
+
+th{
+  font-weight: bold;
+}
+
+tr:hover:nth-child(1n + 2) {
+  background-color: black;
+}
+
+.modal-conteudo button {
+  background-color: rgb(53, 53, 53);
+  width: 130px;
+  height: 40px;
+  border: none;
+  padding: 2px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
