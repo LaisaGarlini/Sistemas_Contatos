@@ -34,23 +34,37 @@
 		?>
 	</table>
 
-    <div id="modal" class="modal">
+  <div id="modal" class="modal">
         <div class="modal-conteudo">
             <h2>Editar</h2>
-            <form id="formulario">
+            <form id="formulario" method="POST">
             <label for="Nome">Nome:</label>
             <input type="text" id="Nome" name="Nome">
 
             <label for="cpf">CPF:</label>
             <input type="text" id="cpf" name="cpf">
-
-            <button type="submit" class="salvar">Salvar</button>
-            <button type="button" class="deletar">Deletar Registro</button>
-            <button type="button" onclick="Sair()" class="cancelar">Cancelar</button>
+                                                                          
+            <button type="submit" class="salvar" name="salvar">Salvar</button>   
+            <button type="submit" class="deletar" onclick="Sair()" name="deletar">Deletar Registro</button> 
+            <button type="button" class="cancelar" onclick="Sair()">Cancelar</button>
             </form>
         </div>
     </div>
   </div>
+
+      <?php
+      include("autoload.class.php");
+
+      $ConexaoPG = new Conexao("localhost","postgres","postgres","postgres");
+        if(isset($_POST['deletar'])) {;
+          $sql = "DELETE from pessoa WHERE nome='{$_POST['Nome']}'";
+          
+          try {
+              $rowCount = $ConexaoPG->execute($sql);
+          } catch (Exception $e){}
+          
+        }
+      ?>
 
   <div class="contatos">
   <div class="cabeçalho">
