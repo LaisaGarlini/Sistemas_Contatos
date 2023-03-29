@@ -11,6 +11,17 @@ Algumas dificuldades encontradas foram no momento de atualiza, excluir e adicion
 O comando em sql seria tranquilo de fazer porém não tenho conhecimento de como e em que momento 
 fazer isso no código, pesquisei sobre AJAX porém não consegui compreender muito bem.
 
+//Create do database
+CREATE DATABASE postgres
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Portuguese_Brazil.1252'
+    LC_CTYPE = 'Portuguese_Brazil.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
 
 //Create da tabela "pessoa"
 CREATE TABLE IF NOT EXISTS public.pessoa
