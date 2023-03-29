@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS public.contato
     CONSTRAINT contato_pkey PRIMARY KEY (id),
     CONSTRAINT fk_contato_pessoa FOREIGN KEY (id_pessoa)
         REFERENCES public.pessoa (id) MATCH SIMPLE
-        ON UPDATE NO ACTION
-        ON DELETE NO ACTION
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
 )
 
 //Insert da tabela "pessoa"
